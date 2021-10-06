@@ -1,0 +1,5 @@
+C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\obj\Debug\netcoreapp3.1\P1-AP1-Kelvin-20180193.csprojAssemblyReference.cache
+C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\obj\Debug\netcoreapp3.1\P1-AP1-Kelvin-20180193_MarkupCompile.cache
+C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\obj\Debug\netcoreapp3.1\P1-AP1-Kelvin-20180193_MarkupCompile.lref
