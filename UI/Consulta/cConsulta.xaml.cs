@@ -1,5 +1,8 @@
-﻿using System;
+﻿using P1_AP1_Kelvin_20180193.BLL;
+using P1_AP1_Kelvin_20180193.Entidades;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +23,44 @@ namespace P1_AP1_Kelvin_20180193.UI.Consulta
         public cConsulta()
         {
             InitializeComponent();
+        }
+        private void BuscarButton_Click(object sender, RoutedEventArgs e)
+        {
+            var listado = new List<Aportes>();
+            if (BusquedaTextBox.Text.Trim().Length > 0)
+            {
+                switch (FiltroComboBox.SelectedIndex)
+                {
+                    case 0:
+                        listado = AportesBLL.GetList(e => e.Persona.ToLower().Contains(BusquedaTextBox.Text.ToLower()));
+                        break;
+                    case 1:
+                        listado = AportesBLL.GetList(e => e.Concepto.ToLower().Contains(BusquedaTextBox.Text.ToLower()));
+                        break;
+
+                }
+            }
+            else
+            {
+                listado = AportesBLL.GetList(c => true);
+            }
+
+            if (FechaDesdeDatePicker.SelectedDate != null)
+                listado = AportesBLL.GetList(c => c.Fecha.Date >= FechaDesdeDatePicker.SelectedDate);
+
+            if (FechaHastaDatePicker.SelectedDate != null)
+                listado = AportesBLL.GetList(c => c.Fecha.Date <= FechaHastaDatePicker.SelectedDate);
+
+            var monto = listado.Sum(x => x.Monto);
+
+            var conteo = listado.Count();
+
+            TotalTextBlock.Text = monto.ToString();
+
+            MontoTextBlock.Text = conteo.ToString();
+
+            DatosDataGrid.ItemsSource = null;
+            DatosDataGrid.ItemsSource = listado;
         }
     }
 }
