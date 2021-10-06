@@ -14,7 +14,6 @@ namespace P1_AP1_Kelvin_20180193.BLL
         {
             Contexto contexto = new Contexto();
             bool encontrado = false;
-
             try
             {
                 encontrado = contexto.aportes.Any(async => async.AporteId == id);
