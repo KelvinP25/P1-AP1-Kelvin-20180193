@@ -14,6 +14,7 @@
                 <StackPanel Orientation="Horizontal">
                     <TextBox x:Name="AporteIdTextBox" Width="120" HorizontalAlignment="Left" Margin="23,0,10,0" Text="{Binding AporteId}"/>
                     <Button x:Name="BuscarIdButton" Width="30" Click="BuscarIdButton_Click">
+                        <Image Source="/Resources/search_locate_find_6278.png" />
                     </Button>
                 </StackPanel>
 
@@ -39,20 +40,27 @@
 
                 <StackPanel Orientation="Horizontal" Margin="30,10,10,0">
 
-                    <Button x:Name="NuevoButton" Width="70" Margin="20,0" Click="NuevoButton_Click">
-                        <StackPanel>
+                    <Button x:Name="NuevoButton" Width="90" Margin="20,0" Click="NuevoButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            
+                            <Image Source="/Resources/new_add_user_16734.png" />
                             <Label Content="Nuevo"/>
+
                         </StackPanel>
                     </Button>
 
-                    <Button x:Name="GuardarButton" Width="70" Margin="20,0" Click="GuardarButton_Click">
-                        <StackPanel>
+                    <Button x:Name="GuardarButton" Width="100" Margin="20,0" Click="GuardarButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/savedisk_floppydisk_guardar_1543.png" />
+
                             <Label Content="Guardar"/>
                         </StackPanel>
                     </Button>
 
-                    <Button x:Name="EliminarButton" Width="70" Margin="20,0" Click="EliminarButton_Click">
-                        <StackPanel>
+                    <Button x:Name="EliminarButton" Width="100" Margin="20,0" Click="EliminarButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/delete_40623.png" />
+
                             <Label Content="Eliminar"/>
                         </StackPanel>
                     </Button>
