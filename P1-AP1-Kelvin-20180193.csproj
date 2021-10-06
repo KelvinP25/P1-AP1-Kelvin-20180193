@@ -8,8 +8,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\delete_40623.png" />
+    <None Remove="Resources\new_add_user_16734.png" />
+    <None Remove="Resources\savedisk_floppydisk_guardar_1543.png" />
+    <None Remove="Resources\search_locate_find_6278.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\delete_40623.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\new_add_user_16734.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\savedisk_floppydisk_guardar_1543.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\search_locate_find_6278.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="DATA\" />
-    <Folder Include="UI\Consulta\" />
   </ItemGroup>
 
   <ItemGroup>

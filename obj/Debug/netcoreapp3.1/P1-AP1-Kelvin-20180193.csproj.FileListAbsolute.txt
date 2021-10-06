@@ -58,3 +58,6 @@ C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\obj\Debug
 C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\obj\Debug\netcoreapp3.1\P1-AP1-Kelvin-20180193.dll
 C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\obj\Debug\netcoreapp3.1\P1-AP1-Kelvin-20180193.pdb
 C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\obj\Debug\netcoreapp3.1\P1-AP1-Kelvin-20180193.genruntimeconfig.cache
+C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\obj\Debug\netcoreapp3.1\UI\Consulta\cConsulta.g.cs
+C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\obj\Debug\netcoreapp3.1\UI\Registro\rAportes.g.cs
+C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\obj\Debug\netcoreapp3.1\P1-AP1-Kelvin-20180193_Content.g.cs
