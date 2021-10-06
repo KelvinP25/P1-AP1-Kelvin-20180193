@@ -126,6 +126,7 @@ namespace P1_AP1_Kelvin_20180193.UI.Registro
             }
         }
 
+
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
         {
             if (AportesBLL.Eliminar(UtilidadesBLL.ToInt(AporteIdTextBox.Text)))
