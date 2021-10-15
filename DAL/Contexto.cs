@@ -8,11 +8,11 @@ namespace P1_AP1_Kelvin_20180193.DAL
 {
     public class Contexto : DbContext
     {
-        public DbSet<Aportes> aportes { get; set; }
+        public DbSet<Aporte> Aporte { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source = DATA\Aportes.db");
+            optionsBuilder.UseSqlite(@"Data Source = DATA\Aporte.db");
         }
     }
 }

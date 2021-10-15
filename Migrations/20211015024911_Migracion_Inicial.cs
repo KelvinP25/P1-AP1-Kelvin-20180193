@@ -8,7 +8,7 @@ namespace P1_AP1_Kelvin_20180193.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "aportes",
+                name: "Aporte",
                 columns: table => new
                 {
                     AporteId = table.Column<int>(type: "INTEGER", nullable: false)
@@ -20,14 +20,14 @@ namespace P1_AP1_Kelvin_20180193.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_aportes", x => x.AporteId);
+                    table.PrimaryKey("PK_Aporte", x => x.AporteId);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "aportes");
+                name: "Aporte");
         }
     }
 }

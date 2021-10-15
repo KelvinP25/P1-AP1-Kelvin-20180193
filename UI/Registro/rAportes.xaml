@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P1_AP1_Kelvin_20180193.UI.Registro"
         mc:Ignorable="d"
-        Title="Registro de Aportes" Height="450" Width="800">
+        Title="Registro de Aportes" Height="350" Width="430">
     <Grid>
         <StackPanel>
             <StackPanel Orientation="Vertical">
@@ -18,17 +18,17 @@
                     </Button>
                 </StackPanel>
 
-                <Label Content="Fecha: " Margin="20,20,0,0"/>
+                <Label Content="Fecha: " Margin="20,0,0,0"/>
                 <StackPanel>
                     <DatePicker x:Name="FechaDatePicker" Margin="23,0,0,0" Width="150" HorizontalAlignment="Left" Text="{Binding Fecha}"/>
                 </StackPanel>
 
-                <Label Content="Persona: " Margin="20,20,0,0"/>
+                <Label Content="Persona: " Margin="20,0,0,0"/>
                 <StackPanel>
                     <TextBox x:Name="PersonaTextBox" Width="400" HorizontalAlignment="Left" Margin="23,0,0,0" Text="{Binding Persona}"/>
                 </StackPanel>
 
-                <Label Content="Concepto: " Margin="20,20,0,0"/>
+                <Label Content="Concepto: " Margin="20,0,0,0"/>
                 <StackPanel>
                     <TextBox x:Name="ConceptoTextBox" Width="400" HorizontalAlignment="Left" Margin="23,0,0,0" Text="{Binding Concepto}"/>
                 </StackPanel>
@@ -38,7 +38,7 @@
                     <TextBox x:Name="MontoTextBox" Margin="23,0,0,0" Width="120" HorizontalAlignment="Left" Text="{Binding Monto}"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="30,10,10,0">
+                <StackPanel Orientation="Horizontal" Margin="3,10,10,0">
 
                     <Button x:Name="NuevoButton" Width="90" Margin="20,0" Click="NuevoButton_Click">
                         <StackPanel Orientation="Horizontal">

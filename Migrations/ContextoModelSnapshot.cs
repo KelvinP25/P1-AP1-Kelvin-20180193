@@ -14,9 +14,9 @@ namespace P1_AP1_Kelvin_20180193.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "5.0.10");
+                .HasAnnotation("ProductVersion", "5.0.11");
 
-            modelBuilder.Entity("P1_AP1_Kelvin_20180193.Entidades.Aportes", b =>
+            modelBuilder.Entity("P1_AP1_Kelvin_20180193.Entidades.Aporte", b =>
                 {
                     b.Property<int>("AporteId")
                         .ValueGeneratedOnAdd()
@@ -36,7 +36,7 @@ namespace P1_AP1_Kelvin_20180193.Migrations
 
                     b.HasKey("AporteId");
 
-                    b.ToTable("aportes");
+                    b.ToTable("Aporte");
                 });
 #pragma warning restore 612, 618
         }

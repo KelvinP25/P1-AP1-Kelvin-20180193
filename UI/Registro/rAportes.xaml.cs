@@ -19,7 +19,7 @@ namespace P1_AP1_Kelvin_20180193.UI.Registro
     /// </summary>
     public partial class rAportes : Window
     {
-        private Aportes aportes = new Aportes();
+        private Aporte aporte = new Aporte();
         public class DateFormat : System.Windows.Data.IValueConverter
         {
             public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
@@ -37,14 +37,14 @@ namespace P1_AP1_Kelvin_20180193.UI.Registro
         public rAportes()
         {
             InitializeComponent();
-            this.DataContext = aportes;
+            this.DataContext = aporte;
 
         }
 
         private void Limpiar()
         {
-            this.aportes = new Aportes();
-            this.DataContext = aportes;
+            this.aporte = new Aporte();
+            this.DataContext = aporte;
         }
         private bool Validar()
         {
@@ -85,22 +85,24 @@ namespace P1_AP1_Kelvin_20180193.UI.Registro
                     MessageBoxButton.OK, MessageBoxImage.Warning);
 
             }
+
+            MontoTextBox.Text = aporte.Monto.ToString("N2");
             return esValido;
         }
         private void BuscarIdButton_Click(object sender, RoutedEventArgs e)
         {
-            var aporte = AportesBLL.Buscar(UtilidadesBLL.ToInt(AporteIdTextBox.Text));
+            var aporte = AporteBLL.Buscar(UtilidadesBLL.ToInt(AporteIdTextBox.Text));
             if (aporte != null)
             {
-                this.aportes = aporte;
+                this.aporte = aporte;
             }
             else
             {
-                this.aportes = new Aportes();
+                this.aporte = new Aporte();
                 MessageBox.Show("No se ha Encontrado", "Error",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-            this.DataContext = this.aportes;
+            this.DataContext = this.aporte;
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
@@ -112,7 +114,7 @@ namespace P1_AP1_Kelvin_20180193.UI.Registro
         {
             if (!Validar())
                 return;
-            var paso = AportesBLL.Guardar(aportes);
+            var paso = AporteBLL.Guardar(aporte);
             if (paso)
             {
                 Limpiar();
@@ -129,7 +131,7 @@ namespace P1_AP1_Kelvin_20180193.UI.Registro
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
         {
-            if (AportesBLL.Eliminar(UtilidadesBLL.ToInt(AporteIdTextBox.Text)))
+            if (AporteBLL.Eliminar(UtilidadesBLL.ToInt(AporteIdTextBox.Text)))
             {
                 Limpiar();
                 MessageBox.Show("Registro eliminado!", "Exito",

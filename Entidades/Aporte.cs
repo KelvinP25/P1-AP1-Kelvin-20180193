@@ -5,7 +5,7 @@ using System.Text;
 
 namespace P1_AP1_Kelvin_20180193.Entidades
 {
-    public class Aportes
+    public class Aporte
     {
         [Key]
         public int AporteId { get; set; }

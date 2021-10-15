@@ -26,36 +26,36 @@ namespace P1_AP1_Kelvin_20180193.UI.Consulta
         }
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var listado = new List<Aportes>();
+            var listado = new List<Aporte>();
             if (BusquedaTextBox.Text.Trim().Length > 0)
             {
                 switch (FiltroComboBox.SelectedIndex)
                 {
                     case 0:
-                        listado = AportesBLL.GetList(e => e.Persona.ToLower().Contains(BusquedaTextBox.Text.ToLower()));
+                        listado = AporteBLL.GetList(e => e.Persona.ToLower().Contains(BusquedaTextBox.Text.ToLower()));
                         break;
                     case 1:
-                        listado = AportesBLL.GetList(e => e.Concepto.ToLower().Contains(BusquedaTextBox.Text.ToLower()));
+                        listado = AporteBLL.GetList(e => e.Concepto.ToLower().Contains(BusquedaTextBox.Text.ToLower()));
                         break;
 
                 }
             }
             else
             {
-                listado = AportesBLL.GetList(c => true);
+                listado = AporteBLL.GetList(c => true);
             }
 
             if (FechaDesdeDatePicker.SelectedDate != null)
-                listado = AportesBLL.GetList(c => c.Fecha.Date >= FechaDesdeDatePicker.SelectedDate);
+                listado = AporteBLL.GetList(c => c.Fecha.Date >= FechaDesdeDatePicker.SelectedDate);
 
             if (FechaHastaDatePicker.SelectedDate != null)
-                listado = AportesBLL.GetList(c => c.Fecha.Date <= FechaHastaDatePicker.SelectedDate);
+                listado = AporteBLL.GetList(c => c.Fecha.Date <= FechaHastaDatePicker.SelectedDate);
 
             var monto = listado.Sum(x => x.Monto);
 
             var conteo = listado.Count();
 
-            TotalTextBlock.Text = monto.ToString();
+            TotalTextBlock.Text = monto.ToString("N2");
 
             MontoTextBlock.Text = conteo.ToString();
 

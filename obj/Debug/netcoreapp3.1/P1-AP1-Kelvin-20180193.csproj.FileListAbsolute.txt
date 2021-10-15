@@ -65,8 +65,8 @@ C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\bin\Debug
 C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\bin\Debug\netcoreapp3.1\Resources\new_add_user_16734.png
 C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\bin\Debug\netcoreapp3.1\Resources\savedisk_floppydisk_guardar_1543.png
 C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\bin\Debug\netcoreapp3.1\Resources\search_locate_find_6278.png
-C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\bin\Debug\netcoreapp3.1\DATA\Aportes.db
 C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\obj\Debug\netcoreapp3.1\UI\Consulta\cConsulta.baml
 C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\obj\Debug\netcoreapp3.1\UI\Registro\rAportes.baml
 C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\obj\Debug\netcoreapp3.1\P1_AP1_Kelvin_20180193.Properties.Resources.resources
 C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\obj\Debug\netcoreapp3.1\P1-AP1-Kelvin-20180193.csproj.GenerateResource.cache
+C:\Users\Asus\Documents\Primer parcial Aplicada\P1-AP1-Kelvin-20180193\bin\Debug\netcoreapp3.1\DATA\Aporte.db

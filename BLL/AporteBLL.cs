@@ -1,4 +1,5 @@
-﻿using P1_AP1_Kelvin_20180193.DAL;
+﻿
+using P1_AP1_Kelvin_20180193.DAL;
 using P1_AP1_Kelvin_20180193.Entidades;
 using System;
 using System.Collections.Generic;
@@ -8,15 +9,16 @@ using System.Text;
 
 namespace P1_AP1_Kelvin_20180193.BLL
 {
-    public class AportesBLL
+    public class AporteBLL
     {
         public static bool Existe(int id)
         {
             Contexto contexto = new Contexto();
             bool encontrado = false;
+
             try
             {
-                encontrado = contexto.aportes.Any(async => async.AporteId == id);
+                encontrado = contexto.Aporte.Any(a => a.AporteId == id);
             }
             catch (Exception)
             {
@@ -30,14 +32,14 @@ namespace P1_AP1_Kelvin_20180193.BLL
             return encontrado;
         }
 
-        public static bool Insertar(Aportes aportes)
+        public static bool Insertar(Aporte aporte)
         {
             Contexto contexto = new Contexto();
             bool paso = false;
 
             try
             {
-                contexto.aportes.Add(aportes);
+                contexto.Aporte.Add(aporte);
                 paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
@@ -51,14 +53,14 @@ namespace P1_AP1_Kelvin_20180193.BLL
             return paso;
         }
 
-        public static bool Modificar(Aportes aportes)
+        public static bool Modificar(Aporte aporte)
         {
             Contexto contexto = new Contexto();
             bool paso = false;
 
             try
             {
-                contexto.Entry(aportes).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                contexto.Entry(aporte).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                 paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
@@ -72,15 +74,15 @@ namespace P1_AP1_Kelvin_20180193.BLL
             return paso;
         }
 
-        public static bool Guardar(Aportes aportes)
+        public static bool Guardar(Aporte aporte)
         {
-            if (!Existe(aportes.AporteId))
+            if (!Existe(aporte.AporteId))
             {
-                return Insertar(aportes);
+                return Insertar(aporte);
             }
             else
             {
-                return Modificar(aportes);
+                return Modificar(aporte);
             }
         }
 
@@ -91,10 +93,10 @@ namespace P1_AP1_Kelvin_20180193.BLL
 
             try
             {
-                var aporte = contexto.aportes.Find(id);
+                var aporte = contexto.Aporte.Find(id);
                 if (aporte != null)
                 {
-                    contexto.aportes.Remove(aporte);
+                    contexto.Aporte.Remove(aporte);
                     paso = contexto.SaveChanges() > 0;
                 }
             }
@@ -109,14 +111,14 @@ namespace P1_AP1_Kelvin_20180193.BLL
             return paso;
         }
 
-        public static Aportes Buscar(int id)
+        public static Aporte Buscar(int id)
         {
             Contexto contexto = new Contexto();
-            Aportes aportes;
+            Aporte aporte;
 
             try
             {
-                aportes = contexto.aportes.Find(id);
+                aporte = contexto.Aporte.Find(id);
             }
             catch (Exception)
             {
@@ -126,16 +128,16 @@ namespace P1_AP1_Kelvin_20180193.BLL
             {
                 contexto.Dispose();
             }
-            return aportes;
+            return aporte;
         }
-        public static List<Aportes> GetList(Expression<Func<Aportes, bool>> criterio)
+        public static List<Aporte> GetList(Expression<Func<Aporte, bool>> criterio)
         {
-            List<Aportes> lista = new List<Aportes>();
+            List<Aporte> lista = new List<Aporte>();
             Contexto contexto = new Contexto();
 
             try
             {
-                lista = contexto.aportes.Where(criterio).ToList();
+                lista = contexto.Aporte.Where(criterio).ToList();
             }
             catch (Exception)
             {
@@ -147,14 +149,14 @@ namespace P1_AP1_Kelvin_20180193.BLL
             }
             return lista;
         }
-        public static List<Aportes> GetAportes()
+        public static List<Aporte> GetAporte()
         {
-            List<Aportes> lista = new List<Aportes>();
+            List<Aporte> lista = new List<Aporte>();
             Contexto contexto = new Contexto();
 
             try
             {
-                lista = contexto.aportes.ToList();
+                lista = contexto.Aporte.ToList();
             }
             catch (Exception)
             {

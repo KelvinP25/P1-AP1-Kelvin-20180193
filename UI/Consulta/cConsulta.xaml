@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P1_AP1_Kelvin_20180193.UI.Consulta"
         mc:Ignorable="d"
-        Title="Consulta de aportes" Height="450" Width="800">
+        Title="Consulta de aportes" Height="450" Width="400">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10,5,10,0">
             <StackPanel Orientation="Horizontal" Height="58">
@@ -19,33 +19,37 @@
                     <DatePicker x:Name="FechaHastaDatePicker"/>
                 </StackPanel>
 
-                <StackPanel Margin="5,0">
-                    <Label x:Name="FiltroLabel" Content="Filtro:"/>
-                    <ComboBox x:Name="FiltroComboBox" Width="100" Height="25">
+
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical">
+                <Label x:Name="FiltroLabel" Content="Filtro:" Height="25"/>
+                <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                    <ComboBox x:Name="FiltroComboBox" Width="100" Height="25" >
                         <ComboBoxItem x:Name="PersonaComboBoxItem" Content="Persona"/>
                         <ComboBoxItem x:Name="ConceptoComboBoxItem" Content="Concepto"/>
                     </ComboBox>
-                </StackPanel>
 
-                <StackPanel Orientation="Horizontal">
-                    <TextBox x:Name="BusquedaTextBox" Width="120" Height="25" Margin="10,5,8,8" VerticalAlignment="Bottom" />
-                </StackPanel>
-
-                <Button x:Name="BuscarButton" Height="30" Width="85" Margin="0,20,0,0" Click="BuscarButton_Click">
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="/Resources/search_locate_find_6278.png" />
-
-                        <Label Content="Buscar"/>
+                        <TextBox x:Name="BusquedaTextBox" Width="120" Height="25" Margin="10,5,8,8" VerticalAlignment="Bottom" />
                     </StackPanel>
-                </Button>
+
+                    <Button x:Name="BuscarButton" Height="30" Width="85" Margin="0,0,0,5" Click="BuscarButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/search_locate_find_6278.png" />
+
+                            <Label Content="Buscar"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
             </StackPanel>
 
             <StackPanel HorizontalAlignment="Left">
 
-                <DataGrid x:Name="DatosDataGrid" Height="240" Width="500" AutoGenerateColumns="False">
+                <DataGrid x:Name="DatosDataGrid" Height="240" Width="325" AutoGenerateColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Aporte Id" Binding="{Binding AporteId}"/>
-                        <DataGridTextColumn Header="Fecha   " Binding="{Binding Fecha}"/>
+                        <DataGridTextColumn Header="Fecha      " Binding="{Binding Fecha}"/>
                         <DataGridTextColumn Header="Persona" Binding="{Binding Persona}"/>
                         <DataGridTextColumn Header="Concepto" Binding="{Binding Concepto}"/>
                         <DataGridTextColumn Header="Monto" Binding="{Binding Monto}"/>
